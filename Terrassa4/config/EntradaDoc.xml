@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://www.compart.com/ns/dbnevada/config/input/file" xmlns:ns0="http://www.compart.com/ns/dbnevada/config/input" xmlns:ns1="http://www.compart.com/ns/vtk/attributes">
+   <ns0:Path>${ProcessDir}\documents\in\</ns0:Path>
+   <ns0:Name>*.pdf</ns0:Name>
+   <ns0:ProcessingMode>DEFAULT</ns0:ProcessingMode>
+   <ns0:CustomBreakMessages>
+      <ns1:unregisteredBreakMessages/>
+      <ns1:registeredBreakMessages/>
+   </ns0:CustomBreakMessages>
+   <ns0:RunMode>SEQUENTIAL</ns0:RunMode>
+   <ns0:InputDocumentAttributes>
+      <ns1:Common>
+         <ns1:Type>pdf</ns1:Type>
+      </ns1:Common>
+   </ns0:InputDocumentAttributes>
+</Config>

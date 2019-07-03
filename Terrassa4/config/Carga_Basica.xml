@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://www.compart.com/ns/dbnevada/config/script">
+   <Libraries/>
+   <Script>importPackage(java.util);
+importPackage(java.lang);
+importPackage(Packages.java.io);
+importPackage(Packages.javax.xml.parsers);
+importClass(javax.xml.parsers.DocumentBuilder);
+importClass(javax.xml.parsers.DocumentBuilderFactory);
+importPackage(Packages.javax.xml);
+importPackage(Packages.javax.xml.xpath);
+importClass(javax.xml.xpath.XPathFactory);
+importClass(javax.xml.xpath.XPathConstants);
+importClass(org.w3c.dom.NodeList);
+importPackage(net.compart.cplib.docponent);
+fileVariables.EsUltimaPagina 		= pageVariables.PageIsLast;
+processVariables.PaginaDocumento 	= pageVariables.PageNumber;
+var numeroPaginas = parseInt(processVariables.PaginaDocumento)+1;
+var parImpar = numeroPaginas % 2;
+if (parImpar == 1) {
+	processVariables.FicheroImpar = true;
+} else {processVariables.FicheroImpar = false;}
+
+/*if(page.isLandscape())
+      page.setRotation(90);
+var leftSpace 	= new Length(frame, &quot;0mm&quot;);
+var rightSpace 	= new Length(frame, &quot;0mm&quot;);
+var topSpace 	= new Length(frame, &quot;0mm&quot;);
+var bottomSpace = new Length(frame, &quot;0mm&quot;);
+page.setFitToPrintableAreaFormat(Page.Paperformat.A4, Page.Orientation.Portrait, leftSpace, rightSpace, topSpace, bottomSpace);*/
+
+if (processVariables.PaginaDocumento == 1) {
+	try{
+		processVariables.NumeroDocumento 	= parseInt(processVariables.NumeroDocumento)+1;
+		fileVariables.nombreFicheroSalida 	= &quot;Terrassa.pdf&quot;;
+		var builderFactory 					= DocumentBuilderFactory.newInstance();
+		var builder 						= builderFactory.newDocumentBuilder();
+		var xPath 							= XPathFactory.newInstance().newXPath();
+		var confUID 						= new FileInputStream(new File(fileVariables.InputFileDirectory+ &quot;/ConfTrabajo.xml&quot;));
+		var xmlDocumentUID 					= builder.parse(confUID);
+		var xPathUID 						= XPathFactory.newInstance().newXPath();
+		nodeList 							= xPathUID.compile(&quot;//trabajo/cod_orden_trabajo&quot;).evaluate(xmlDocumentUID, XPathConstants.NODESET);
+		processVariables.UID 				= nodeList.item(0).getFirstChild().getNodeValue();
+		nodeList 							= xPathUID.compile(&quot;//trabajo/cod_subtrabajo_f1&quot;).evaluate(xmlDocumentUID, XPathConstants.NODESET);
+		processVariables.UID 				= processVariables.UID+ nodeList.item(0).getFirstChild().getNodeValue();
+		fileVariables.dir 					= fileVariables.InputFileDirectory.replace(&quot;/proceso&quot;,&quot;/normal&quot;)+&quot;/&quot;+&quot;Terrassa_FC.xml&quot;;
+	} catch (e) {logger.error(&quot;Error al configurar las rutas de salida.&quot;);}
+}</Script>
+</Config>

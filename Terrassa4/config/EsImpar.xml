@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://www.compart.com/ns/dbnevada/config/split">
+   <UnaryStringVariableCheck>
+      <Variable>FicheroImpar</Variable>
+      <Parameter>true</Parameter>
+      <Operation>CONTAINS</Operation>
+   </UnaryStringVariableCheck>
+</Config>

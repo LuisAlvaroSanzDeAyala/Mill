@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trabajo>
+	<cod_orden_trabajo>1</cod_orden_trabajo>
+	<cod_subtrabajo_f1>00</cod_subtrabajo_f1>
+	<producto>P1</producto>
+	<clientecorreos>CC1</clientecorreos>
+</trabajo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://www.compart.com/ns/dbnevada/config/script">
+   <Libraries/>
+   <Script>importPackage(Packages.java.io);&#xd;
+importPackage(java.util);&#xd;
+importPackage(net.compart.cplib.docponent);&#xd;
+if(page.isLandscape())&#xd;
+      page.setRotation(90);&#xd;
+var leftSpace 	= new Length(frame, &quot;0mm&quot;);&#xd;
+var rightSpace 	= new Length(frame, &quot;10mm&quot;);&#xd;
+var topSpace 	= new Length(frame, &quot;0mm&quot;);&#xd;
+var bottomSpace = new Length(frame, &quot;0mm&quot;);&#xd;
+&#xd;
+page.setFitToPrintableAreaFormat(Page.Paperformat.A4, Page.Orientation.Portrait, leftSpace, rightSpace, topSpace, bottomSpace);</Script>
+</Config>

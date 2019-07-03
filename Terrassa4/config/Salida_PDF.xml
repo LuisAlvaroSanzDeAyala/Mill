@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://www.compart.com/ns/dbnevada/config/output" xmlns:ns0="http://www.compart.com/ns/vtk/attributes" xmlns:ns1="http://www.compart.com/ns/dbnevada/config">
+   <Path>${ProcessDir}\documents\out\</Path>
+   <Name>${nombreFicheroSalida}</Name>
+   <Method>OVERWRITE</Method>
+   <OutputDocumentAttributes>
+      <ns0:Common>
+         <ns0:MergeFonts>true</ns0:MergeFonts>
+         <ns0:MergeType1>true</ns0:MergeType1>
+         <ns0:SelfContained>true</ns0:SelfContained>
+         <ns0:Type>pdf</ns0:Type>
+      </ns0:Common>
+      <ns0:PDF>
+         <ns0:ViewerAutoPrintEnabled>false</ns0:ViewerAutoPrintEnabled>
+      </ns0:PDF>
+   </OutputDocumentAttributes>
+   <Xmp>
+      <ns1:Encoding>UTF-8</ns1:Encoding>
+   </Xmp>
+</Config>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://www.compart.com/ns/dbnevada/config/split">
+   <UnaryNumericVariableCheck>
+      <Variable>PageNumber</Variable>
+      <Parameter>1</Parameter>
+      <Operation>EQUALS</Operation>
+   </UnaryNumericVariableCheck>
+</Config>

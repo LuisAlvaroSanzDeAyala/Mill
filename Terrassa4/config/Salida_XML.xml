@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://www.compart.com/ns/dbnevada/config/output/metadata/generic" xmlns:ns0="http://www.compart.com/ns/dbnevada/config/output">
+   <ns0:Path>${ProcessDir}\documents\in\</ns0:Path>
+   <ns0:Name>${dir}</ns0:Name>
+   <ns0:Method>OVERWRITE</ns0:Method>
+   <Encoding>UTF-8</Encoding>
+   <Template>
+      <Header>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xd;
+&lt;DOCUMENTOS></Header>
+      <Body>&lt;DOCUMENTO>&#xd;
+&lt;FC_DOC_ID>${xml_UID}&lt;/FC_DOC_ID>&#xd;
+&lt;FC_PAGINAS>${xml_Paginas}&lt;/FC_PAGINAS>&#xd;
+&lt;FC_FICHERO>${xml_Fichero}&lt;/FC_FICHERO>&#xd;
+&lt;FC_POS_SPOOL_INI>${xml_PosSpoolIni}&lt;/FC_POS_SPOOL_INI>&#xd;
+&lt;FC_POS_SPOOL_FIN>${xml_PosSpoolFin}&lt;/FC_POS_SPOOL_FIN>&#xd;
+&lt;FC_DOC_ID_CLIENTE>${xml_DocIdCliente}&lt;/FC_DOC_ID_CLIENTE>&#xd;
+&lt;FC_IDIOMA>${xml_Idioma}&lt;/FC_IDIOMA>&#xd;
+&lt;FC_FICHERO_ENTRADA>${xml_FicheroEntrada}&lt;/FC_FICHERO_ENTRADA>&#xd;
+&lt;CANALES>&#xd;
+&lt;CANAL>&#xd;
+&lt;FC_CANAL>${xml_Canal}&lt;/FC_CANAL>&#xd;
+&lt;FC_ESMUESTRA>${xml_EsMuestra}&lt;/FC_ESMUESTRA>&#xd;
+&lt;/CANAL>&#xd;
+&lt;/CANALES>&#xd;
+&lt;POSTAL>&#xd;
+&lt;FC_TIPO_CORRESPONDENCIA>${xml_TipoCorrespondencia}&lt;/FC_TIPO_CORRESPONDENCIA>&#xd;
+&lt;FC_DISTRIBUIDOR>${xml_Distribuidor}&lt;/FC_DISTRIBUIDOR>&#xd;
+&lt;FC_TIPO_PAPEL>${xml_TipoPapel}&lt;/FC_TIPO_PAPEL>&#xd;
+&lt;FC_DUPLEX>${xml_Duplex}&lt;/FC_DUPLEX>&#xd;
+&lt;FC_BUNDLE>${xml_Bundle}&lt;/FC_BUNDLE>&#xd;
+&lt;FC_NOM_SOBRE>${xml_Sobre}&lt;/FC_NOM_SOBRE>&#xd;
+&lt;FC_INSERTOS1_6>${xml_Insertos}&lt;/FC_INSERTOS1_6>&#xd;
+&lt;FC_NOM_INSERTO1>${xml_NomInserto1}&lt;/FC_NOM_INSERTO1>&#xd;
+&lt;FC_NOM_INSERTO2>${xml_NomInserto2}&lt;/FC_NOM_INSERTO2>&#xd;
+&lt;FC_NOM_INSERTO3>${xml_NomInserto3}&lt;/FC_NOM_INSERTO3>&#xd;
+&lt;FC_NOM_INSERTO4>${xml_NomInserto4}&lt;/FC_NOM_INSERTO4>&#xd;
+&lt;FC_NOM_INSERTO5>${xml_NomInserto5}&lt;/FC_NOM_INSERTO5>&#xd;
+&lt;FC_NOM_INSERTO6>${xml_NomInserto6}&lt;/FC_NOM_INSERTO6>&#xd;
+&lt;/POSTAL>&#xd;
+&lt;DESTINATARIO>&#xd;
+&lt;FC_DEST_CODIGO_CLIENTE>${xml_DestCodCliente}&lt;/FC_DEST_CODIGO_CLIENTE>&#xd;
+&lt;FC_DEST_CONTRATO_CLIENTE>${xml_DestContratoCliente}&lt;/FC_DEST_CONTRATO_CLIENTE>&#xd;
+&lt;FC_DEST_NOMBRE>${xml_DestNombre}&lt;/FC_DEST_NOMBRE>&#xd;
+&lt;FC_DEST_DIRECCION>${xml_DestDireccion}&lt;/FC_DEST_DIRECCION>&#xd;
+&lt;FC_DEST_LOCALIDAD>${xml_DestLocalidad}&lt;/FC_DEST_LOCALIDAD>&#xd;
+&lt;FC_DEST_PROVINCIA>${xml_DestProvincia}&lt;/FC_DEST_PROVINCIA>&#xd;
+&lt;FC_DEST_CP>${xml_DestCP}&lt;/FC_DEST_CP>&#xd;
+&lt;FC_DEST_ZIP>${xml_DestZip}&lt;/FC_DEST_ZIP>&#xd;
+&lt;FC_DEST_PAIS>${xml_DestPais}&lt;/FC_DEST_PAIS>&#xd;
+&lt;FC_DEST_ZONA_POSTAL>${xml_DestZonaPostal}&lt;/FC_DEST_ZONA_POSTAL>&#xd;
+&lt;/DESTINATARIO>&#xd;
+&lt;/DOCUMENTO></Body>
+      <Footer>&lt;/DOCUMENTOS></Footer>
+   </Template>
+</Config>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://www.compart.com/ns/dbnevada/config/script">
+   <Libraries/>
+   <Script>importPackage(java.util);
+importPackage(java.lang);
+importPackage(Packages.java.io);
+importPackage (Packages.java.nio.charset);
+fileVariables.NombreFichero = fileVariables.InputFileBaseName.substring(21, 33);
+map = new HashMap();
+try {
+	dir 		= new File(fileVariables.InputFileDirectory);
+	var files 	= dir.listFiles();
+	ficherosTXT = new ArrayList();
+	for (var i = 0; i &lt; files.length; i++) {
+		if (!files[i].getName().contains(&quot;.pdf&quot;)) {
+			if (!files[i].getName().contains(&quot;.xml&quot;)) {
+				ficherosTXT.add(files[i].getName());
+				fileVariables.HayFicheros = true;
+			}
+		}
+//		if (files[i].getName().includes(&quot;.1400&quot;)) {
+//			ficherosTXT.add(files[i].getName());
+//			fileVariables.HayFicheros = true;
+//			}
+	}
+	if (fileVariables.HayFicheros = false){logger.error(&quot;No se ha encontrado FICHERO GUIA.&quot;);}
+	for (var i = 0; i &lt; ficherosTXT.size(); i++) {
+		var br = new BufferedReader(new InputStreamReader(new FileInputStream(fileVariables.InputFileDirectory + &quot;/&quot; + ficherosTXT.get(i)),&quot;Cp1252&quot;));
+		var separador = &quot;&quot;;	
+		while ((separador = br.readLine()) != null) {
+			logger.info(&quot;&lt;*>&quot; + separador);
+
+			separador = separador.replaceAll(&quot;#.#&quot;, &quot; . &quot;);
+			separador = separador.substring(1, 24).toString().trim() + &quot;#.#&quot; + 
+						separador.substring(24, 124).toString().trim() + &quot;#.#&quot; + 
+						separador.substring(124,174).toString().trim() + &quot;#.#&quot; + 
+						separador.substring(174, 214).toString().trim() + &quot;#.#&quot; + 
+						separador.substring(214,265).toString().trim() + &quot;#.#&quot; + 
+						separador.substring(265).toString().trim();
+			var res = separador.split(&quot;#.#&quot;);
+			map.put(res[res.length - 1].toString(), separador);
+		}
+		br.close();
+	}
+	logger.info(&quot;****aaaaaaaaaaaaaaaaaaaa******&quot;);
+
+	var lineaMapa 				= map.get(fileVariables.NombreFichero);
+	var BarCode 				= lineaMapa.split(&quot;#.#&quot;);
+	fileVariables.VarSICER 		= BarCode[0];
+	fileVariables.UserNombre 	= BarCode[1];
+	fileVariables.UserDireccion = BarCode[2];
+	fileVariables.UserCiudad 	= BarCode[3];
+	fileVariables.UserCP 		= BarCode[4];
+} catch (e) {logger.error(&quot;Error durante la lectura del FICHERO GUIA.&quot;);}</Script>
+</Config>

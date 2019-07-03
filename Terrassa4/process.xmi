@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="ASCII"?>
+<com.compart.dbnevada.model.process:PwtProcess xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.compart.dbnevada.model.process="http://www.compart.com/ns/com.compart.dbwb.pwt.model/1.0.0" name="New_process" autoStart="true" autoCleanup="true">
+  <wires source="//@components.0" target="//@components.3"/>
+  <wires source="//@components.2" target="//@components.6" sequenceNumber="1"/>
+  <wires source="//@components.5" target="//@components.7"/>
+  <wires source="//@components.9" target="//@components.8"/>
+  <wires source="//@components.8" target="//@components.10" sequenceNumber="1"/>
+  <wires source="//@components.5" target="//@components.4" sequenceNumber="1"/>
+  <wires source="//@components.6" target="//@components.11"/>
+  <wires source="//@components.8" target="//@components.6"/>
+  <wires source="//@components.11" target="//@components.12"/>
+  <wires source="//@components.2" target="//@components.1"/>
+  <wires source="//@components.10" target="//@components.4"/>
+  <wires source="//@components.12" target="//@components.13" sequenceNumber="1"/>
+  <wires source="//@components.12" target="//@components.5"/>
+  <wires source="//@components.7" target="//@components.4" sequenceNumber="1"/>
+  <wires source="//@components.7" target="//@components.4"/>
+  <wires source="//@components.6" target="//@components.4" sequenceNumber="1"/>
+  <wires source="//@components.1" target="//@components.9"/>
+  <wires source="//@components.3" target="//@components.14"/>
+  <wires source="//@components.14" target="//@components.2"/>
+  <components name="EntradaDoc" type="com.compart.dbnevada.components.input.file.FileInputComponent">
+    <componentVersions package="com.compart.dbnevada.components.input.file.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/input/file"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.dbnevada.components.input.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/input"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="Carga_info" type="com.compart.dbnevada.components.script.ScriptComponent">
+    <componentVersions package="com.compart.dbnevada.components.script.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/script"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="EsPrimera" type="com.compart.dbnevada.components.split.SplitComponent.Routing">
+    <componentVersions package="com.compart.dbnevada.components.split.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/split"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="Carga_Basica" type="com.compart.dbnevada.components.script.ScriptComponent">
+    <componentVersions package="com.compart.dbnevada.components.script.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/script"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="Salida_PDF" type="com.compart.dbnevada.components.output.OutputComponent">
+    <componentVersions package="com.compart.dbnevada.components.output.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/output"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="EsImpar" type="com.compart.dbnevada.components.split.SplitComponent.Routing">
+    <componentVersions package="com.compart.dbnevada.components.split.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/split"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="EsUltima" type="com.compart.dbnevada.components.split.SplitComponent.Routing">
+    <componentVersions package="com.compart.dbnevada.components.split.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/split"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="Pagina_Final_Extra" type="com.compart.dbnevada.components.addpage.AddPageComponent">
+    <componentVersions package="com.compart.dbnevada.components.addpage.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/addpage"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="Pagina_Inicial" type="com.compart.dbnevada.components.addpage.AddPageComponent">
+    <componentVersions package="com.compart.dbnevada.components.addpage.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/addpage"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="Direccion" type="com.compart.dbnevada.components.script.ScriptComponent">
+    <componentVersions package="com.compart.dbnevada.components.script.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/script"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="BarcodeConInfo" type="com.compart.dbnevada.components.modifypage.ModifyPageComponent">
+    <componentVersions package="com.compart.dbnevada.components.modifypage.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/modifypage"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="Carga_Variables_XML" type="com.compart.dbnevada.components.script.ScriptComponent">
+    <componentVersions package="com.compart.dbnevada.components.script.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/script"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="SalidaExtra" type="com.compart.dbnevada.components.duplicate.DuplicateComponent">
+    <componentVersions package="com.compart.dbnevada.components.duplicate.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/duplicate"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="Salida_XML" type="com.compart.dbnevada.components.output.metadata.generic.GenericOutputMetaDataComponent">
+    <componentVersions package="com.compart.dbnevada.components.output.metadata.generic.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/output/metadata/generic"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.dbnevada.components.output.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/output"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <components name="ReSize" type="com.compart.dbnevada.components.script.ScriptComponent">
+    <componentVersions package="com.compart.dbnevada.components.script.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config/script"/>
+    <componentVersions package="com.compart.dbnevada.api.config" version="4.9.0" namespaceURI="http://www.compart.com/ns/dbnevada/config"/>
+    <componentVersions package="com.compart.commonplugins.vtk.attributes" version="2.9.0" namespaceURI="http://www.compart.com/ns/vtk/attributes"/>
+  </components>
+  <variables name="PaginaDocumento" type="PROCESS_VARIABLES" defaultValue="0"/>
+  <variables name="EsUltimaPagina" type="FILE_VARIABLES"/>
+  <variables name="NumeroDocumento" type="PROCESS_VARIABLES" defaultValue="0"/>
+  <variables name="FicheroImpar" type="PROCESS_VARIABLES"/>
+  <variables name="HayFicheros" type="FILE_VARIABLES" defaultValue="false"/>
+  <variables name="VarSICER" type="FILE_VARIABLES"/>
+  <variables name="UserNombre" type="FILE_VARIABLES"/>
+  <variables name="UserDireccion" type="FILE_VARIABLES"/>
+  <variables name="UserCiudad" description="i&#xD;&#xA;" type="FILE_VARIABLES"/>
+  <variables name="UserCP" type="FILE_VARIABLES"/>
+  <variables name="UserProvincia" type="FILE_VARIABLES"/>
+  <variables name="VarZonaPostal" type="FILE_VARIABLES"/>
+  <variables name="EsUltimoFichero" type="PROCESS_VARIABLES" defaultValue="0"/>
+  <variables name="pagacumuladas" type="PROCESS_VARIABLES" defaultValue="0"/>
+  <variables name="xml_Sobre" type="FILE_VARIABLES" defaultValue=""/>
+  <variables name="NombreFichero" type="FILE_VARIABLES"/>
+  <variables name="contadorHojasExtra" type="PROCESS_VARIABLES" defaultValue="0"/>
+  <variables name="paginasContainsFichero" type="PROCESS_VARIABLES" defaultValue="0"/>
+  <variables name="xml_UID" type="FILE_VARIABLES"/>
+  <variables name="xml_Paginas" type="FILE_VARIABLES"/>
+  <variables name="xml_PaginasM2" type="FILE_VARIABLES"/>
+  <variables name="xml_Fichero" type="FILE_VARIABLES"/>
+  <variables name="xml_PosSpoolIni" type="FILE_VARIABLES"/>
+  <variables name="xml_PosSpoolFin" type="FILE_VARIABLES"/>
+  <variables name="xml_DocIdCliente" type="FILE_VARIABLES"/>
+  <variables name="xml_Idioma" type="FILE_VARIABLES"/>
+  <variables name="xml_FicheroEntrada" type="FILE_VARIABLES"/>
+  <variables name="xml_Canal" type="FILE_VARIABLES"/>
+  <variables name="xml_EsMuestra" type="FILE_VARIABLES"/>
+  <variables name="xml_TipoCorrespondencia" type="FILE_VARIABLES"/>
+  <variables name="xml_Distribuidor" type="FILE_VARIABLES"/>
+  <variables name="xml_TipoPapel" type="FILE_VARIABLES"/>
+  <variables name="xml_Duplex" type="FILE_VARIABLES"/>
+  <variables name="xml_Bundle" type="FILE_VARIABLES"/>
+  <variables name="xml_NomSobre" type="FILE_VARIABLES"/>
+  <variables name="xml_Insertos" type="FILE_VARIABLES"/>
+  <variables name="xml_NomInserto1" type="FILE_VARIABLES"/>
+  <variables name="xml_NomInserto2" type="FILE_VARIABLES"/>
+  <variables name="xml_NomInserto3" type="FILE_VARIABLES"/>
+  <variables name="xml_NomInserto4" type="FILE_VARIABLES"/>
+  <variables name="xml_NomInserto5" type="FILE_VARIABLES"/>
+  <variables name="xml_NomInserto6" type="FILE_VARIABLES"/>
+  <variables name="xml_DestCodCliente" type="FILE_VARIABLES"/>
+  <variables name="xml_DestContratoCliente" type="FILE_VARIABLES"/>
+  <variables name="xml_DestNombre" type="FILE_VARIABLES"/>
+  <variables name="xml_DestDireccion" type="FILE_VARIABLES"/>
+  <variables name="xml_DestLocalidad" type="FILE_VARIABLES"/>
+  <variables name="xml_DestProvincia" type="FILE_VARIABLES"/>
+  <variables name="xml_DestCP" type="FILE_VARIABLES"/>
+  <variables name="xml_DestZip" type="FILE_VARIABLES"/>
+  <variables name="xml_DestPais" type="FILE_VARIABLES"/>
+  <variables name="xml_DestZonaPostal" type="FILE_VARIABLES"/>
+  <variables name="UID" type="PROCESS_VARIABLES"/>
+  <variables name="dir" type="FILE_VARIABLES"/>
+  <variables name="nombreFicheroSalida" type="FILE_VARIABLES"/>
+  <processVariables name="RootDir" defaultValue=""/>
+</com.compart.dbnevada.model.process:PwtProcess>

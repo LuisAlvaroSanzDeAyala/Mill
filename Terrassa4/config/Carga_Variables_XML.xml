@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://www.compart.com/ns/dbnevada/config/script">
+   <Libraries>
+      <Library>
+         <Path>${ProcessDir}\resources\Fichero_Control.js</Path>
+         <Encoding>UTF-8</Encoding>
+      </Library>
+   </Libraries>
+   <Script>/*
+The following predefined read only variables can be used in the
+script:
+
+Process variables - using 'processVariables.[name of the process variable]':
+The variables defined in the preferences can be similarly
+used.
+- RootDir
+- _LicensePath
+- _LogLevel
+- _LogDir
+- ProcessDir
+- _NodeId
+- _NodeName
+- ProcessId
+- ProcessName
+- ProcessStartTime
+- ProcessingMode
+- _JobId
+- ProfileDir
+- _InputDir
+- _InputName
+- _OutputDir
+- _OutputName
+- _StartPage
+- _EndPage
+- _UnregisteredBreakMessages
+- _RegisteredBreakMessages
+
+File variables - using 'fileVariables.[name of the file variable]':
+- InputFileDirectory
+- InputFilePath
+- InputFileName
+- InputFileBaseName
+- InputFileExtension
+- InputFileType
+- InputFileAuthor
+- OutputFileDefaultExtension
+- OutputFileType
+
+Page variables - using 'pageVariables.[name of the page variable]':
+- PageNumber
+- PageNumberProcess
+- PageIsLast
+
+All variables listed above (read only) - using 'allVariables.[name of the variable]'.
+
+Special variables - DocPonents and util classes:
+The variables defined in the list below can be similarly
+used.
+- logger
+- frame
+- inputDocument
+- page
+- bookmarks
+- frameResourceCache
+*/</Script>
+</Config>
